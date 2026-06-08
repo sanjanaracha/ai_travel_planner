@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-S_URL =st.secrets("s_url")
+S_URL =st.secrets["s_url"]
 
 travel_tab, weather_tab, budget_tab, places_tab = st.tabs(
     [
