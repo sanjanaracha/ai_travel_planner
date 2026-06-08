@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-S_URL = "http://127.0.0.1:8000"
+S_URL =st.secrets("s_url")
 
 travel_tab, weather_tab, budget_tab, places_tab = st.tabs(
     [
