@@ -3,6 +3,8 @@ import requests
 
 S_URL =st.secrets["s_url"]
 
+st.header("AI Travel Planner")
+
 travel_tab, weather_tab, budget_tab, places_tab = st.tabs(
     [
         "✈️ Travel Planner",
@@ -16,7 +18,7 @@ travel_tab, weather_tab, budget_tab, places_tab = st.tabs(
 
 with travel_tab:
 
-    st.header("AI Travel Planner")
+    
 
     city = st.text_input(
         "Destination City",
