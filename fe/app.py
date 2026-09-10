@@ -41,9 +41,16 @@ with travel_tab:
             }
         )
 
-        data = response.json()
+        # data = response.json()
+        st.write("STATUS:", response.status_code)
+        st.write("CONTENT TYPE:", response.headers.get("content-type"))
+        st.code(response.text)
 
-        st.markdown(data["response"])
+        if response.ok:
+            data = response.json()
+            st.markdown(data["response"])
+
+        # st.markdown(data["response"])
 
 
 # ---------------- WEATHER ---------------- #
